@@ -1,14 +1,13 @@
 import express from "express";
+import { signup } from "../controllers/auth.controller.js";
 
 const router = express.Router();
 
-router.get("/signup", (req, res) => {
-  res.send("Signup endpoint");
-});
+// ИСПРАВЛЕНО: POST вместо GET
+router.post("/signup", signup);
 
-router.get("/login", (req, res) => {
-  res.send("Login endpoint");
-});
+// Для логина тоже нужно POST
+/* router.post("/login", login); */ // если будет контроллер login
 
 router.get("/logout", (req, res) => {
   res.send("Logout endpoint");
