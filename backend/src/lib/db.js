@@ -12,3 +12,4 @@ export const connectDB = async () => {
     process.exit(1); // 1 status code means fail, 0 means success
   }
 };
+//test commit
